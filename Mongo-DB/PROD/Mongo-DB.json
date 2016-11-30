@@ -1,0 +1,25 @@
+{
+    "$schema": "http://schema.management.azure.com/schemas/2014-04-01-preview/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "name": {
+            "type": "string"
+        },
+        "location": {
+            "type": "string"
+        }
+    },
+    "resources": [
+        {
+            "apiVersion": "2015-04-08",
+            "type": "Microsoft.DocumentDb/databaseAccounts",
+            "name": "[parameters('name')]",
+            "location": "[parameters('location')]",
+            "kind": "MongoDB",
+            "properties": {
+                "name": "[parameters('name')]",
+                "databaseAccountOfferType": "Standard"
+            }
+        }
+    ]
+}
