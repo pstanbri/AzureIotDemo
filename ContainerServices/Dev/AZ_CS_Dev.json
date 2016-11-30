@@ -75,7 +75,7 @@
     },
     "linuxAdminUsername": {
       "type": "string",
-      "defaultValue": "azureuser",
+      "defaultValue": "azuredevusr",
       "metadata": {
         "description": "User name for the Linux Virtual Machines."
       }
